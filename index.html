@@ -1,1 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>Your Name</h1>
+    <p class="tag">Student engineer • Robotics / AI / Hardware (edit this)</p>
+
+    <div class="links">
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      <a href="mailto:you@email.com">Email</a>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2>Projects</h2>
+
+    <!-- PROJECT CARD -->
+    <section class="card">
+      <div class="media">
+        <!-- Option A: image -->
+        <img src="assets/project1.jpg" alt="Project 1 preview" />
+
+        <!-- Option B: local video file -->
+        <!--
+        <video controls playsinline preload="metadata">
+          <source src="assets/project1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        -->
+
+        <!-- Option C: YouTube embed -->
+        <!--
+        <div class="embed">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Project 1 video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        -->
+      </div>
+
+      <div class="content">
+        <h3>Project Title 1</h3>
+        <p class="sub">Role • Tech stack • Date (optional)</p>
+        <p>
+          2–4 sentence description: what you built, why it matters, and what it does.
+        </p>
+        <ul>
+          <li>Key achievement / metric (speed, accuracy, size, etc.)</li>
+          <li>Hard problem you solved</li>
+          <li>What you’d do next</li>
+        </ul>
+
+        <div class="buttons">
+          <a class="btn" href="https://github.com/..." target="_blank" rel="noopener">Code</a>
+          <a class="btn" href="https://demo-link..." target="_blank" rel="noopener">Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DUPLICATE THIS CARD FOR EACH PROJECT -->
+    <section class="card">
+      <div class="media">
+        <video controls playsinline preload="metadata">
+          <source src="assets/project2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="content">
+        <h3>Project Title 2</h3>
+        <p class="sub">Role • Tools • Date</p>
+        <p>Short description.</p>
+        <ul>
+          <li>Highlight</li>
+          <li>Highlight</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Your Name</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
