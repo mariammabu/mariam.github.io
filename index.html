@@ -3,12 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mariam Abu-Rahma — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Mariam Abu-Rahma — Projects</title>
+
+  <style>
+    :root{
+      --bg:#0b0f16;
+      --card:#121826;
+      --text:#e8eaf0;
+      --muted:#a6adbb;
+      --line:rgba(255,255,255,.10);
+      --btn:rgba(59,130,246,.22);
+      --btnHover:rgba(59,130,246,.33);
+      --btnGhost:rgba(255,255,255,.06);
+      --btnGhostHover:rgba(255,255,255,.12);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .wrap{max-width:980px;margin:0 auto;padding:26px 16px}
+    header{padding-top:34px;padding-bottom:10px}
+    .headrow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+    h1{margin:0 0 6px;font-size:2rem}
+    .tag{margin:0;color:var(--muted)}
+    .topbuttons{display:flex;gap:10px;flex-wrap:wrap}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: var(--btn);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:600;
+    }
+    .btn:hover{background:var(--btnHover)}
+    .btn.ghost{background:var(--btnGhost)}
+    .btn.ghost:hover{background:var(--btnGhostHover)}
+
+    .section{margin-top:28px}
+    h2{margin:0 0 6px;font-size:1.4rem}
+    .muted{color:var(--muted);margin:0 0 14px}
+
+    .card{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap:18px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      margin:16px 0;
+    }
+
+    .media img, .media video{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#000;
+      margin-bottom:14px;
+    }
+
+    .content p{margin:0 0 12px}
+    ul{margin:10px 0 16px;padding-left:18px}
+    li{margin:7px 0}
+
+    @media (max-width: 900px){
+      .card{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 
 <body>
-  <header class="wrap header">
+  <header class="wrap">
     <div class="headrow">
       <div>
         <h1>Mariam Abu-Rahma</h1>
@@ -16,53 +92,84 @@
       </div>
 
       <div class="topbuttons">
-        <a class="btn ghost" href="#project">Project</a>
-        <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn ghost" href="#projects">Projects</a>
+        <a class="btn ghost" href="resume.pdf" target="_blank">Resume</a>
         <a class="btn ghost"
-           href="mailto:mariammaburahma@gmail.com?subject=Hello%20Mariam&body=Hi%20Mariam%2C%0A%0A">
+           href="mailto:mariammaburahma@gmail.com?subject=Hello%20Mariam">
           Contact
         </a>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section id="project" class="section">
+  <main class="wrap" id="projects">
+
+    <!-- IR PROJECT -->
+    <section class="section">
+      <h2>Arduino IR Wand + LED Control System</h2>
+      <p class="muted">Infrared-controlled lighting system with custom microcontroller logic</p>
+
+      <div class="card">
+        <div class="media">
+          <img src="assets/image1.png" alt="IR project image 1">
+          <img src="assets/image2.png" alt="IR project image 2">
+          <img src="assets/image3.png" alt="IR project image 3">
+
+          <video autoplay muted loop playsinline>
+            <source src="assets/demo.mov" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="content">
+          <p><strong>Designed and built an infrared-controlled LED system using embedded microcontroller logic.</strong></p>
+
+          <p>
+            This project integrates hardware circuitry with embedded software to transmit and decode IR signals,
+            allowing wireless control of LED patterns and color modes.
+          </p>
+
+          <p>
+            The system interprets button presses, holds, and repeat signals to trigger different lighting behaviors,
+            including color cycling and power control. The hardware is currently being refined into a custom PCB
+            design using KiCad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AIxKUMITE -->
+    <section class="section">
       <h2>AIxKumite</h2>
       <p class="muted">AI-based karate match analysis (in progress)</p>
 
       <div class="card">
         <div class="media">
-          <img src="assets/screen.png" alt="AIxKumite screenshot" />
-          <video controls playsinline preload="metadata">
-            <source src="assets/output.mp4" type="video/mp4" />
+          <img src="assets/screen.png" alt="AIxKumite screenshot">
+          <video controls muted>
+            <source src="assets/output.mp4" type="video/mp4">
           </video>
         </div>
 
         <div class="content">
+          <p><strong>Building AI detection in karate for opponent data analysis (in progress).</strong></p>
+
           <p>
-            Developing an AI-based video analysis and sensor system tool to detect karate techniques and extract performance data.
-            Integrating computer vision and pose estimation to generate performance analytics from match footage.
+            I am developing a computer vision system that analyzes karate match footage to track athletes,
+            detect techniques, and generate performance data for strategic review.
           </p>
 
-          <ul>
-            <li>Multi-person detection to track competitors across frames</li>
-            <li>Pose-based technique validation using joint angles (ex: full arm extension)</li>
-            <li>Goal: improve overall player performance using advanced sensing + analytics</li>
-          </ul>
+          <p>
+            The system uses multi-person detection, pose estimation, and joint-angle validation to recognize
+            techniques in real time while maintaining identity tracking across frames.
+          </p>
 
-          <a class="btn" href="https://aixkumite.com" target="_blank" rel="noopener">View Website</a>
+          <a class="btn" href="https://aixkumite.com" target="_blank">
+            View Website
+          </a>
         </div>
       </div>
     </section>
 
-    <footer class="wrap footer">
-      <p class="muted">© <span id="y"></span> Mariam Abu-Rahma</p>
-    </footer>
   </main>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
