@@ -3,193 +3,118 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mariam Abu-Rahma</title>
+  <title>Mariam Abu-Rahma — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="wrap">
-    <h1>Mariam Abu-Rahma</h1>
-    <p class="tag">Engineering + AI + Robotics • Class of 2027 • Homestead High School</p>
+  <header class="wrap header">
+    <div class="headrow">
+      <div>
+        <h1>Mariam Abu-Rahma</h1>
+        <p class="tag">Engineering • AI • Robotics</p>
+      </div>
 
-    <nav class="nav">
-      <a href="#projects">Projects</a>
-      <a href="#awards">Awards</a>
-      <a href="#other">Other Projects</a>
-      <a href="#hobbies">Hobbies</a>
-      <a href="#contact">Contact</a>
-      <a class="resume" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-    </nav>
+      <div class="toplinks">
+        <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="pill" href="#project">Project</a>
+        <a class="pill" href="mailto:mariammaburahma@gmail.com?subject=Hello%20Mariam&body=Hi%20Mariam%2C%0A%0A" aria-label="Email Mariam">Contact</a>
+      </div>
+    </div>
   </header>
 
   <main class="wrap">
+    <section id="project" class="section">
+      <h2>AIxKumite</h2>
+      <p class="muted">AI-based karate match analysis (in progress)</p>
 
-    <!-- FEATURED PROJECTS -->
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <p class="muted">A few of my main projects right now.</p>
-
-      <!-- AIxKumite -->
-      <article class="card">
+      <div class="card">
+        <!-- SLIDESHOW -->
         <div class="media">
-          <!-- Replace with your real file OR use YouTube embed -->
-          <video controls playsinline preload="metadata">
-            <source src="assets/aixkumite-demo.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="content">
-          <h3>AIxKumite — AI-Based Karate Match Analysis (In progress)</h3>
-          <p class="sub">Python • YOLOv8 • MediaPipe Pose • OpenCV • NumPy • JS/HTML</p>
-          <p>
-            Developing a multi-person system that detects techniques, tracks competitors, and generates performance analytics from match footage.
-          </p>
-          <ul>
-            <li>Multi-person detection pipeline to track red/blue competitors across frames</li>
-            <li>Pose-based technique validation using joint angles (ex: full arm extension)</li>
-            <li>Identity persistence logic during occlusion + fast movement</li>
-            <li>Real-time score counter + technique timeline visualization</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/maburahma145/aixkumite" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://aixkumite.com" target="_blank" rel="noopener">Website</a>
+          <div class="slideshow" id="slideshow">
+            <!-- Slide 1: image -->
+            <div class="slide active">
+              <img src="assets/sceen.png" alt="AIxKumite screenshot" />
+            </div>
+
+            <!-- Slide 2: video -->
+            <div class="slide">
+              <video controls playsinline preload="metadata">
+                <source src="assets/output.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <button class="navbtn prev" type="button" aria-label="Previous media">‹</button>
+            <button class="navbtn next" type="button" aria-label="Next media">›</button>
+
+            <div class="dots" aria-label="Slideshow navigation">
+              <button class="dot active" type="button" aria-label="Slide 1"></button>
+              <button class="dot" type="button" aria-label="Slide 2"></button>
+            </div>
           </div>
         </div>
-      </article>
 
-      <!-- MIT BeaverWorks -->
-      <article class="card">
-        <div class="media">
-          <video controls playsinline preload="metadata">
-            <source src="assets/beaverworks-car.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <!-- DESCRIPTION -->
         <div class="content">
-          <h3>MIT BeaverWorks — Autonomous Racecar System</h3>
-          <p class="sub">Python • OpenCV • HSV segmentation • Contours • Closed-loop control</p>
           <p>
-            Built an autonomous line-following vehicle integrating computer vision perception with steering control.
+            I’m developing a multi-person computer vision system that detects karate techniques, tracks competitors,
+            and generates performance analytics from match footage.
           </p>
+
           <ul>
-            <li>HSV-based contour detection to track lines + trigger marker-based turns</li>
-            <li>Proportional steering using lateral error from contour center</li>
-            <li>Dynamic speed tuning around corners for stability</li>
-            <li><b>Awards:</b> 2nd Place Overall + Academic Achievement</li>
+            <li>Tracks red/blue competitors across frames with identity persistence</li>
+            <li>Validates techniques using pose + joint-angle checks (ex: full arm extension)</li>
+            <li>Outputs a score counter and technique timeline for performance review</li>
           </ul>
-          <div class="links">
-            <a href="#" target="_blank" rel="noopener">Code (placeholder)</a>
-            <a href="#" target="_blank" rel="noopener">Demo (placeholder)</a>
+
+          <div class="actions">
+            <a class="btn" href="https://aixkumite.com" target="_blank" rel="noopener">View AIxKumite Website</a>
           </div>
-        </div>
-      </article>
-
-      <!-- IR Wand -->
-      <article class="card">
-        <div class="media">
-          <img src="assets/irwand.jpg" alt="Arduino IR wand + LED control system" />
-        </div>
-        <div class="content">
-          <h3>Arduino IR Wand + LED Control System</h3>
-          <p class="sub">Arduino • C++ • IR comms • LED circuits • Fusion 360 • KiCad (PCB WIP)</p>
-          <p>
-            Built an infrared-controlled LED lighting system integrated into a custom 3D-printed enclosure.
-          </p>
-          <ul>
-            <li>Designed and printed custom housings for the wand + LED system</li>
-            <li>Programmed IR decoding to map signals to lighting behaviors</li>
-            <li>Integrated circuitry with embedded control logic</li>
-            <li>Currently modeling the circuit into a custom PCB in KiCad</li>
-          </ul>
-          <div class="links">
-            <a href="#" target="_blank" rel="noopener">Demo (placeholder)</a>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- AWARDS -->
-    <section id="awards" class="section">
-      <h2>Awards</h2>
-      <ul class="list">
-        <li><b>2nd Place Overall</b> — MIT BeaverWorks Autonomous Systems / Robotics</li>
-        <li><b>Academic Achievement Recognition</b> — MIT BeaverWorks</li>
-        <li><b>USA Karate National Team Athlete</b> (5+ years) — ranked #2 worldwide</li>
-        <li><b>International Medalist</b> — Mexico K1 Gold & Silver; Brazil Pan American Bronze</li>
-        <li><b>4× Homestead Green and White Awards</b></li>
-        <li><b>COVID-19 Research Study (Published)</b> — Journal of Emerging Investigators</li>
-      </ul>
-    </section>
-
-    <!-- OTHER PROJECTS -->
-    <section id="other" class="section">
-      <h2>Other Projects</h2>
-      <p class="muted">More builds (details + media coming soon).</p>
-
-      <div class="grid">
-        <div class="mini">
-          <h3>Stair-Climbing Robot</h3>
-          <p>8-motor platform that climbs stairs using synchronized gear-driven motion (Arduino + 3D printed frame).</p>
-          <a href="#" target="_blank" rel="noopener">Media (placeholder)</a>
-        </div>
-
-        <div class="mini">
-          <h3>Ultrasonic Acoustic Levitation</h3>
-          <p>Assembled + tuned ultrasonic transducers to create stable pressure nodes for levitation.</p>
-          <a href="#" target="_blank" rel="noopener">Media (placeholder)</a>
-        </div>
-
-        <div class="mini">
-          <h3>Mechanical Automata</h3>
-          <p>Rebuilt + modified a mechanical linkage design to improve stability and smoothness.</p>
-          <a href="#" target="_blank" rel="noopener">Media (placeholder)</a>
-        </div>
-
-        <div class="mini">
-          <h3>Motorized Crane Robot</h3>
-          <p>User-controlled crane using servos + pulley system to lift and place objects.</p>
-          <a href="#" target="_blank" rel="noopener">Media (placeholder)</a>
-        </div>
-
-        <div class="mini">
-          <h3>Quadruped Robot (Evodyne)</h3>
-          <p>Worked on assembly + gait testing + debugging for stability and walk cycle consistency.</p>
-          <a href="#" target="_blank" rel="noopener">Media (placeholder)</a>
-        </div>
-
-        <div class="mini">
-          <h3>More</h3>
-          <p>LED systems, prototyping builds, and other robotics experiments.</p>
         </div>
       </div>
-    </section>
-
-    <!-- HOBBIES -->
-    <section id="hobbies" class="section">
-      <h2>Hobbies</h2>
-      <ul class="list">
-        <li>Karate (training + coaching)</li>
-        <li>Electronic circuits + microcontrollers</li>
-        <li>3D modeling + 3D printing</li>
-        <li>Coding</li>
-        <li>Art</li>
-        <li>Leadership & teaching (STEM workshops + mentoring)</li>
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:mariammaburahma@gmail.com">mariammaburahma@gmail.com</a></p>
-      <p>Location: Sunnyvale, California</p>
     </section>
 
     <footer class="wrap footer">
       <p class="muted">© <span id="y"></span> Mariam Abu-Rahma</p>
     </footer>
-
   </main>
 
   <script>
+    // year
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // slideshow logic (2 slides)
+    const slideshow = document.getElementById("slideshow");
+    const slides = Array.from(slideshow.querySelectorAll(".slide"));
+    const dots = Array.from(slideshow.querySelectorAll(".dot"));
+    const prevBtn = slideshow.querySelector(".prev");
+    const nextBtn = slideshow.querySelector(".next");
+
+    let idx = 0;
+
+    function pauseAllVideos() {
+      slides.forEach(s => {
+        const v = s.querySelector("video");
+        if (v) v.pause();
+      });
+    }
+
+    function show(i) {
+      idx = (i + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle("active", k === idx));
+      dots.forEach((d, k) => d.classList.toggle("active", k === idx));
+      pauseAllVideos(); // don’t keep playing when switching
+    }
+
+    prevBtn.addEventListener("click", () => show(idx - 1));
+    nextBtn.addEventListener("click", () => show(idx + 1));
+    dots.forEach((d, k) => d.addEventListener("click", () => show(k)));
+
+    // Optional: keyboard support
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") show(idx - 1);
+      if (e.key === "ArrowRight") show(idx + 1);
+    });
   </script>
 </body>
 </html>
