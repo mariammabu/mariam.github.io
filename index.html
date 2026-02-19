@@ -1,175 +1,297 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mariam Abu-Rahma — Projects</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mariam Abu-Rahma - Projects</title>
 
-  <style>
-    :root{
-      --bg:#0b0f16;
-      --card:#121826;
-      --text:#e8eaf0;
-      --muted:#a6adbb;
-      --line:rgba(255,255,255,.10);
-      --btn:rgba(59,130,246,.22);
-      --btnHover:rgba(59,130,246,.33);
-      --btnGhost:rgba(255,255,255,.06);
-      --btnGhostHover:rgba(255,255,255,.12);
-    }
+<style>
+:root{
+  --bg:#0b0f16;
+  --card:#121826;
+  --text:#e8eaf0;
+  --muted:#a6adbb;
+  --line:rgba(255,255,255,.10);
+  --btn:rgba(59,130,246,.25);
+  --btnHover:rgba(59,130,246,.4);
+  --btnGhost:rgba(255,255,255,.06);
+  --btnGhostHover:rgba(255,255,255,.15);
+}
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.55;
-    }
+*{box-sizing:border-box}
 
-    .wrap{max-width:980px;margin:0 auto;padding:26px 16px}
-    header{padding-top:34px;padding-bottom:10px}
-    .headrow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
-    h1{margin:0 0 6px;font-size:2rem}
-    .tag{margin:0;color:var(--muted)}
-    .topbuttons{display:flex;gap:10px;flex-wrap:wrap}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
 
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background: var(--btn);
-      color:var(--text);
-      text-decoration:none;
-      font-weight:600;
-    }
-    .btn:hover{background:var(--btnHover)}
-    .btn.ghost{background:var(--btnGhost)}
-    .btn.ghost:hover{background:var(--btnGhostHover)}
+.wrap{max-width:1200px;margin:0 auto;padding:25px 20px}
 
-    .section{margin-top:28px}
-    h2{margin:0 0 6px;font-size:1.4rem}
-    .muted{color:var(--muted);margin:0 0 14px}
+header{padding-top:25px}
 
-    .card{
-      display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap:18px;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:18px;
-      margin:16px 0;
-    }
+.headrow{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:16px;
+}
 
-    .media img, .media video{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:#000;
-      margin-bottom:14px;
-    }
+h1{margin:0;font-size:2rem}
+.tag{color:var(--muted);margin-top:4px}
 
-    .content p{margin:0 0 12px}
-    ul{margin:10px 0 16px;padding-left:18px}
-    li{margin:7px 0}
+.topbuttons{display:flex;gap:10px;flex-wrap:wrap}
 
-    @media (max-width: 900px){
-      .card{grid-template-columns:1fr}
-    }
-  </style>
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:var(--btn);
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn:hover{background:var(--btnHover)}
+
+.btn.ghost{background:var(--btnGhost)}
+.btn.ghost:hover{background:var(--btnGhostHover)}
+
+.section{margin-top:0px}
+
+h2{margin:0 0 8px;font-size:1.6rem}
+.muted{color:var(--muted)}
+
+.card{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:30px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:25px;
+  margin-top:20px;
+}
+
+.media img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  border:1px solid var(--line);
+  margin-bottom:15px;
+}
+
+/* IR image grid */
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:15px;
+}
+
+.image-grid img{
+  width:100%;
+  height:auto;
+}
+
+/* Controlled video height */
+.media video{
+  width:100%;
+  max-height:280px;
+  object-fit:contain;
+  border-radius:12px;
+  border:1px solid var(--line);
+  margin-bottom:15px;
+  background:#000;
+}
+
+/* More Projects Grid */
+.more-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:25px;
+}
+
+.image-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  border:1px solid var(--line);
+}
+
+.image-card img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Hover overlay */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  opacity:0;
+  transition:opacity 0.3s ease;
+  font-size:0.95rem;
+}
+
+.image-card:hover .overlay{
+  opacity:1;
+}
+
+@media(max-width:900px){
+  .card{grid-template-columns:1fr}
+  .more-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
 </head>
 
 <body>
-  <header class="wrap">
-    <div class="headrow">
-      <div>
-        <h1>Mariam Abu-Rahma</h1>
-        <p class="tag">Engineering • AI • Robotics</p>
-      </div>
 
-      <div class="topbuttons">
-        <a class="btn ghost" href="#projects">Projects</a>
-        <a class="btn ghost" href="resume.pdf" target="_blank">Resume</a>
-        <a class="btn ghost"
-           href="mailto:mariammaburahma@gmail.com?subject=Hello%20Mariam">
-          Contact
-        </a>
-      </div>
+<header class="wrap">
+  <div class="headrow">
+    <div>
+      <h1>Mariam Abu-Rahma</h1>
+      <div class="tag">Engineering • AI • Robotics</div>
     </div>
-  </header>
 
-  <main class="wrap" id="projects">
+    <div class="topbuttons">
+      <a class="btn ghost" href="#projects">Projects</a>
+      <a class="btn ghost" href="resume.pdf" target="_blank">Resume</a>
+      <a class="btn ghost" href="mailto:mariammaburahma@gmail.com?subject=Hello%20Mariam">Contact</a>
+    </div>
+  </div>
+</header>
 
-    <!-- IR PROJECT -->
-    <section class="section">
-      <h2>Arduino IR Wand + LED Control System</h2>
-      <p class="muted">Infrared-controlled lighting system with custom microcontroller logic</p>
+<main class="wrap" id="projects">
 
-      <div class="card">
-        <div class="media">
-          <img src="assets/image1.png" alt="IR project image 1">
-          <img src="assets/image2.png" alt="IR project image 2">
-          <img src="assets/image3.png" alt="IR project image 3">
+<!-- IR PROJECT -->
+<section class="section">
+  <h2>Arduino IR Wand + LED Control System</h2>
+  <div class="muted">Infrared-controlled lighting system with embedded microcontroller logic</div>
 
-          <video autoplay muted loop playsinline>
-            <source src="assets/demo.mov" type="video/mp4">
-          </video>
-        </div>
-
-        <div class="content">
-          <p><strong>Designed and built an infrared-controlled LED system using embedded microcontroller logic.</strong></p>
-
-          <p>
-            This project integrates hardware circuitry with embedded software to transmit and decode IR signals,
-            allowing wireless control of LED patterns and color modes.
-          </p>
-
-          <p>
-            The system interprets button presses, holds, and repeat signals to trigger different lighting behaviors,
-            including color cycling and power control. The hardware is currently being refined into a custom PCB
-            design using KiCad.
-          </p>
-        </div>
+  <div class="card">
+    <div class="media">
+      <div class="image-grid">
+        <img src="assets/image1.png">
+        <img src="assets/image2.png">
+        <img src="assets/image3.png">
       </div>
-    </section>
 
-    <!-- AIxKUMITE -->
-    <section class="section">
-      <h2>AIxKumite</h2>
-      <p class="muted">AI-based karate match analysis (in progress)</p>
+      <video controls playsinline preload="metadata">
+        <source src="assets/demo.mov" type="video/mp4">
+      </video>
+    </div>
 
-      <div class="card">
-        <div class="media">
-          <img src="assets/screen.png" alt="AIxKumite screenshot">
-          <video controls muted>
-            <source src="assets/output.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div>
+      <p><strong>Designed and built an infrared-controlled LED system using embedded microcontroller logic.</strong></p>
 
-        <div class="content">
-          <p><strong>Building AI detection in karate for opponent data analysis (in progress).</strong></p>
+      <p>
+        This project integrates hardware circuitry with embedded software to transmit and decode IR signals,
+        enabling wireless control of LED patterns and lighting behaviors.
+      </p>
 
-          <p>
-            I am developing a computer vision system that analyzes karate match footage to track athletes,
-            detect techniques, and generate performance data for strategic review.
-          </p>
+      <p>
+        The system interprets button presses, holds, and repeat signals to trigger different color modes
+        and power states. The hardware is currently being refined into a custom PCB design using KiCad.
+      </p>
+    </div>
+  </div>
+</section>
 
-          <p>
-            The system uses multi-person detection, pose estimation, and joint-angle validation to recognize
-            techniques in real time while maintaining identity tracking across frames.
-          </p>
+<!-- AIxKUMITE -->
+<section class="section">
+  <h2>AIxKumite</h2>
+  <div class="muted">AI-based karate match analysis (in progress)</div>
 
-          <a class="btn" href="https://aixkumite.com" target="_blank">
-            View Website
-          </a>
-        </div>
-      </div>
-    </section>
+  <div class="card">
+    <div class="media">
+      <img src="assets/screen.png">
+      <video controls playsinline preload="metadata" muted>
+        <source src="assets/output.mp4" type="video/mp4">
+      </video>
+    </div>
 
-  </main>
+    <div>
+      <p><strong>Building AI detection in karate for opponent data analysis (in progress).</strong></p>
+
+      <p>
+        I am developing a computer vision system that analyzes karate match footage to track athletes,
+        detect techniques, and generate performance data.
+      </p>
+
+      <p>
+        The system uses multi-person detection, pose estimation, and joint-angle validation to recognize
+        techniques in real time while maintaining identity tracking across frames.
+      </p>
+
+      <a class="btn" href="https://aixkumite.com" target="_blank">View Website</a>
+    </div>
+  </div>
+</section>
+
+<!-- MORE PROJECTS -->
+<section class="section">
+  <h2>More Projects</h2>
+  <div class="muted">Additional builds and prototypes.</div>
+
+  <div class="more-grid">
+
+    <div class="image-card">
+      <img src="assets/image4.png">
+      <div class="overlay">3D printed mechanical Bird Automata</div>
+    </div>
+
+    <div class="image-card">
+      <img src="assets/image5.png">
+      <div class="overlay">Crane Robot-User powered</div>
+    </div>
+
+    <div class="image-card">
+      <img src="assets/image6.png">
+      <div class="overlay">Ultrasonic Levitator Open-source Kit</div>
+    </div>
+
+    <div class="image-card">
+      <img src="assets/image7.png">
+      <div class="overlay">Print-in-place sliding flexi grid 3D print</div>
+    </div>
+
+    <div class="image-card">
+      <img src="assets/image8.png">
+      <div class="overlay">Father's Day gift color-changing LED box</div>
+    </div>
+
+    <div class="image-card">
+      <img src="assets/image9.png">
+      <div class="overlay">Arduino Powered Boston Dynamics Autonomous Dog</div>
+    </div>
+
+    <div class="image-card">
+      <img src="assets/image10.png">
+      <div class="overlay">Stair Climbing Robot</div>
+    </div>
+
+    <div class="image-card">
+      <img src="assets/image11.png">
+      <div class="overlay">Simple Circuit Star Box 3D print</div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
 </body>
 </html>
