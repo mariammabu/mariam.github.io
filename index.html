@@ -15,10 +15,13 @@
         <p class="tag">Engineering • AI • Robotics</p>
       </div>
 
-      <div class="toplinks">
-        <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-        <a class="pill" href="#project">Project</a>
-        <a class="pill" href="mailto:mariammaburahma@gmail.com?subject=Hello%20Mariam&body=Hi%20Mariam%2C%0A%0A" aria-label="Email Mariam">Contact</a>
+      <div class="topbuttons">
+        <a class="btn ghost" href="#project">Project</a>
+        <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn ghost"
+           href="mailto:mariammaburahma@gmail.com?subject=Hello%20Mariam&body=Hi%20Mariam%2C%0A%0A">
+          Contact
+        </a>
       </div>
     </div>
   </header>
@@ -29,47 +32,26 @@
       <p class="muted">AI-based karate match analysis (in progress)</p>
 
       <div class="card">
-        <!-- SLIDESHOW -->
         <div class="media">
-          <div class="slideshow" id="slideshow">
-            <!-- Slide 1: image -->
-            <div class="slide active">
-              <img src="assets/sceen.png" alt="AIxKumite screenshot" />
-            </div>
-
-            <!-- Slide 2: video -->
-            <div class="slide">
-              <video controls playsinline preload="metadata">
-                <source src="assets/output.mp4" type="video/mp4" />
-              </video>
-            </div>
-
-            <button class="navbtn prev" type="button" aria-label="Previous media">‹</button>
-            <button class="navbtn next" type="button" aria-label="Next media">›</button>
-
-            <div class="dots" aria-label="Slideshow navigation">
-              <button class="dot active" type="button" aria-label="Slide 1"></button>
-              <button class="dot" type="button" aria-label="Slide 2"></button>
-            </div>
-          </div>
+          <img src="assets/screen.png" alt="AIxKumite screenshot" />
+          <video controls playsinline preload="metadata">
+            <source src="assets/output.mp4" type="video/mp4" />
+          </video>
         </div>
 
-        <!-- DESCRIPTION -->
         <div class="content">
           <p>
-            I’m developing a multi-person computer vision system that detects karate techniques, tracks competitors,
-            and generates performance analytics from match footage.
+            Developing an AI-based video analysis and sensor system tool to detect karate techniques and extract performance data.
+            Integrating computer vision and pose estimation to generate performance analytics from match footage.
           </p>
 
           <ul>
-            <li>Tracks red/blue competitors across frames with identity persistence</li>
-            <li>Validates techniques using pose + joint-angle checks (ex: full arm extension)</li>
-            <li>Outputs a score counter and technique timeline for performance review</li>
+            <li>Multi-person detection to track competitors across frames</li>
+            <li>Pose-based technique validation using joint angles (ex: full arm extension)</li>
+            <li>Goal: improve overall player performance using advanced sensing + analytics</li>
           </ul>
 
-          <div class="actions">
-            <a class="btn" href="https://aixkumite.com" target="_blank" rel="noopener">View AIxKumite Website</a>
-          </div>
+          <a class="btn" href="https://aixkumite.com" target="_blank" rel="noopener">View Website</a>
         </div>
       </div>
     </section>
@@ -80,41 +62,7 @@
   </main>
 
   <script>
-    // year
     document.getElementById("y").textContent = new Date().getFullYear();
-
-    // slideshow logic (2 slides)
-    const slideshow = document.getElementById("slideshow");
-    const slides = Array.from(slideshow.querySelectorAll(".slide"));
-    const dots = Array.from(slideshow.querySelectorAll(".dot"));
-    const prevBtn = slideshow.querySelector(".prev");
-    const nextBtn = slideshow.querySelector(".next");
-
-    let idx = 0;
-
-    function pauseAllVideos() {
-      slides.forEach(s => {
-        const v = s.querySelector("video");
-        if (v) v.pause();
-      });
-    }
-
-    function show(i) {
-      idx = (i + slides.length) % slides.length;
-      slides.forEach((s, k) => s.classList.toggle("active", k === idx));
-      dots.forEach((d, k) => d.classList.toggle("active", k === idx));
-      pauseAllVideos(); // don’t keep playing when switching
-    }
-
-    prevBtn.addEventListener("click", () => show(idx - 1));
-    nextBtn.addEventListener("click", () => show(idx + 1));
-    dots.forEach((d, k) => d.addEventListener("click", () => show(k)));
-
-    // Optional: keyboard support
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") show(idx - 1);
-      if (e.key === "ArrowRight") show(idx + 1);
-    });
   </script>
 </body>
 </html>

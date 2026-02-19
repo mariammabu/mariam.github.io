@@ -4,8 +4,6 @@
   --text:#e8eaf0;
   --muted:#a6adbb;
   --line:rgba(255,255,255,.10);
-  --pill:rgba(255,255,255,.06);
-  --pillHover:rgba(255,255,255,.12);
 }
 
 *{box-sizing:border-box}
@@ -24,24 +22,13 @@ body{
 h1{margin:0 0 6px;font-size:2rem}
 .tag{margin:0;color:var(--muted)}
 
-.toplinks{display:flex;flex-wrap:wrap;gap:10px}
-.pill{
-  color:var(--text);
-  text-decoration:none;
-  padding:9px 12px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background:var(--pill);
-}
-.pill:hover{background:var(--pillHover)}
-
 .section{margin-top:22px}
 h2{margin:0 0 4px;font-size:1.35rem}
 .muted{color:var(--muted);margin:0 0 14px}
 
 .card{
   display:grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap:16px;
   background:var(--card);
   border:1px solid var(--line);
@@ -49,11 +36,23 @@ h2{margin:0 0 4px;font-size:1.35rem}
   padding:14px;
 }
 
+.media img, .media video{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#000;
+  margin-bottom:12px;
+}
+
 .content p{margin:0 0 10px}
-ul{margin:10px 0 0;padding-left:18px}
+ul{margin:10px 0 14px;padding-left:18px}
 li{margin:7px 0}
 
-.actions{margin-top:14px}
+.topbuttons{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Buttons */
 .btn{
   display:inline-block;
   padding:10px 12px;
@@ -64,57 +63,8 @@ li{margin:7px 0}
   text-decoration:none;
 }
 .btn:hover{background:rgba(59,130,246,.28)}
-
-/* slideshow */
-.slideshow{
-  position:relative;
-  border-radius:14px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#000;
-}
-
-.slide{display:none}
-.slide.active{display:block}
-
-.slideshow img, .slideshow video{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-.navbtn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:40px;height:40px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background:rgba(0,0,0,.35);
-  color:var(--text);
-  font-size:26px;
-  cursor:pointer;
-}
-.navbtn:hover{background:rgba(0,0,0,.55)}
-.navbtn.prev{left:10px}
-.navbtn.next{right:10px}
-
-.dots{
-  position:absolute;
-  bottom:10px;
-  left:0; right:0;
-  display:flex;
-  justify-content:center;
-  gap:8px;
-}
-.dot{
-  width:10px;height:10px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.25);
-  cursor:pointer;
-}
-.dot.active{background:rgba(255,255,255,.70)}
+.btn.ghost{background:rgba(255,255,255,.06)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
 
 .footer{padding-top:18px;padding-bottom:10px}
 
