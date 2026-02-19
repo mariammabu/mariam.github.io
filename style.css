@@ -1,83 +1,104 @@
 :root{
-  --bg:#0b0f19;
-  --card:#111827;
-  --text:#e5e7eb;
-  --muted:#a1a1aa;
+  --bg:#0b0f16;
+  --card:#121826;
+  --text:#e8eaf0;
+  --muted:#a6adbb;
   --line:rgba(255,255,255,.10);
-  --pill:rgba(255,255,255,.08);
-  --pill2:rgba(255,255,255,.13);
+  --chip:rgba(255,255,255,.06);
 }
 
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:radial-gradient(1200px 600px at 20% -10%, rgba(59,130,246,.25), transparent 60%),
-             radial-gradient(900px 500px at 90% 0%, rgba(168,85,247,.18), transparent 55%),
-             var(--bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.wrap{max-width:980px;margin:0 auto;padding:26px 16px}
+
+h1{margin:0 0 6px;font-size:2rem}
+.tag{margin:0 0 14px;color:var(--muted)}
+
+.nav{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.nav a{
   color:var(--text);
-  line-height:1.55;
-}
-
-.wrap{max-width:980px;margin:0 auto;padding:28px 18px}
-.header{padding-top:36px;padding-bottom:10px}
-h1{margin:0 0 8px;font-size:2.15rem;letter-spacing:-.02em}
-.tag{margin:0;color:var(--muted)}
-.top{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
-
-.pillrow{display:flex;gap:10px;flex-wrap:wrap}
-.pill{
-  text-decoration:none;color:var(--text);
-  padding:9px 12px;border-radius:999px;
+  text-decoration:none;
+  padding:8px 12px;
   border:1px solid var(--line);
-  background:var(--pill);
+  border-radius:999px;
+  background:var(--chip);
 }
-.pill:hover{background:var(--pill2)}
+.nav a:hover{background:rgba(255,255,255,.10)}
+.nav .resume{background:rgba(59,130,246,.16)}
 
-.sectionhead{margin-top:10px;margin-bottom:14px}
-h2{margin:0;font-size:1.25rem}
-.muted{color:var(--muted);margin:6px 0 0}
+.section{margin-top:26px}
+h2{margin:0 0 8px;font-size:1.25rem}
+.muted{color:var(--muted);margin:0 0 12px}
 
 .card{
   display:grid;
-  grid-template-columns:1.25fr 1fr;
-  gap:18px;
-  padding:16px;
-  margin:14px 0;
-  background:rgba(17,24,39,.78);
+  grid-template-columns: 1.2fr 1fr;
+  gap:16px;
+  background:var(--card);
   border:1px solid var(--line);
-  border-radius:18px;
-  backdrop-filter: blur(6px);
+  border-radius:16px;
+  padding:14px;
+  margin:14px 0;
 }
 
-.media img,.media video{
+.media img, .media video{
   width:100%;
   height:auto;
-  border-radius:14px;
-  border:1px solid var(--line);
   display:block;
+  border-radius:12px;
+  border:1px solid var(--line);
   background:#000;
 }
 
-.content h3{margin:0 0 6px;font-size:1.15rem}
+.content h3{margin:0 0 6px;font-size:1.1rem}
 .sub{margin:0 0 10px;color:var(--muted);font-size:.95rem}
-ul{margin:10px 0 0;padding-left:18px;color:var(--text)}
+ul{margin:10px 0 0;padding-left:18px}
 li{margin:6px 0}
 
-.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.btn{
-  display:inline-block;
-  padding:10px 12px;border-radius:12px;
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.links a{
+  color:var(--text);
+  text-decoration:none;
+  padding:8px 10px;
   border:1px solid var(--line);
-  background:rgba(59,130,246,.18);
-  text-decoration:none;color:var(--text);
+  border-radius:10px;
+  background:rgba(255,255,255,.05);
 }
-.btn:hover{background:rgba(59,130,246,.26)}
-.btn.ghost{background:transparent}
-.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.links a:hover{background:rgba(255,255,255,.10)}
 
-.footer{margin-top:28px;padding-bottom:8px}
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
 
-@media (max-width: 860px){
+.mini{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px;
+}
+.mini h3{margin:0 0 6px;font-size:1rem}
+.mini p{margin:0 0 10px;color:var(--muted)}
+.mini a{color:var(--text)}
+
+.list{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px 16px;
+}
+
+.footer{padding-top:10px}
+
+@media (max-width: 900px){
   .card{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
 }
