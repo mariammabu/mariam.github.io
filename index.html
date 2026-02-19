@@ -3,100 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Projects</title>
+  <title>Mariam Abu-Rahma — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header class="wrap">
-    <h1>Your Name</h1>
-    <p class="tag">Student engineer • Robotics / AI / Hardware (edit this)</p>
 
-    <div class="links">
-      <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-      <a href="mailto:you@email.com">Email</a>
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+<body>
+  <header class="wrap header">
+    <div class="top">
+      <div>
+        <h1>Mariam Abu-Rahma</h1>
+        <p class="tag">
+          Student engineer building AI + hardware projects • Robotics • Computer Vision
+        </p>
+      </div>
+
+      <div class="pillrow">
+        <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="pill" href="https://github.com/mariammabu" target="_blank" rel="noopener">GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="pill" href="mailto:YOUR_EMAIL_HERE">Email</a>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
-    <h2>Projects</h2>
-
-    <!-- PROJECT CARD -->
-    <section class="card">
-      <div class="media">
-        <!-- Option A: image -->
-        <img src="assets/project1.jpg" alt="Project 1 preview" />
-
-        <!-- Option B: local video file -->
-        <!--
-        <video controls playsinline preload="metadata">
-          <source src="assets/project1.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        -->
-
-        <!-- Option C: YouTube embed -->
-        <!--
-        <div class="embed">
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID"
-            title="Project 1 video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        -->
-      </div>
-
-      <div class="content">
-        <h3>Project Title 1</h3>
-        <p class="sub">Role • Tech stack • Date (optional)</p>
-        <p>
-          2–4 sentence description: what you built, why it matters, and what it does.
-        </p>
-        <ul>
-          <li>Key achievement / metric (speed, accuracy, size, etc.)</li>
-          <li>Hard problem you solved</li>
-          <li>What you’d do next</li>
-        </ul>
-
-        <div class="buttons">
-          <a class="btn" href="https://github.com/..." target="_blank" rel="noopener">Code</a>
-          <a class="btn" href="https://demo-link..." target="_blank" rel="noopener">Demo</a>
-        </div>
-      </div>
+    <section class="sectionhead">
+      <h2>Projects</h2>
+      <p class="muted">A few things I’ve built recently.</p>
     </section>
 
-    <!-- DUPLICATE THIS CARD FOR EACH PROJECT -->
-    <section class="card">
+    <!-- PROJECT 1 -->
+    <article class="card">
       <div class="media">
         <video controls playsinline preload="metadata">
-          <source src="assets/project2.mp4" type="video/mp4" />
+          <source src="assets/project1.mp4" type="video/mp4" />
         </video>
+      </div>
+      <div class="content">
+        <h3>AIxKumite — Karate Technique Detection</h3>
+        <p class="sub">YOLO + MediaPipe Pose • Python • Computer Vision</p>
+        <p>
+          Detects techniques (starting with kizami-zuki), validates arm extension, and logs events over time.
+        </p>
+        <ul>
+          <li>Multi-person tracking with identity persistence (red/blue)</li>
+          <li>Real-time counters + timeline output</li>
+          <li>Designed for in-browser or lightweight deployment</li>
+        </ul>
+        <div class="btnrow">
+          <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">Demo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 2 (image example) -->
+    <article class="card">
+      <div class="media">
+        <img src="assets/project2.png" alt="Project preview" />
       </div>
       <div class="content">
         <h3>Project Title 2</h3>
-        <p class="sub">Role • Tools • Date</p>
-        <p>Short description.</p>
+        <p class="sub">Tech stack • Year</p>
+        <p>1–2 sentences: what it is and why it matters.</p>
         <ul>
-          <li>Highlight</li>
-          <li>Highlight</li>
+          <li>Key result</li>
+          <li>Hard problem solved</li>
+          <li>What’s next</li>
         </ul>
-        <div class="buttons">
+        <div class="btnrow">
           <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
         </div>
       </div>
-    </section>
+    </article>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Your Name</p>
+      <p class="muted">© <span id="y"></span> Mariam Abu-Rahma</p>
     </footer>
   </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
