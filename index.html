@@ -1,169 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mariam Abu-Rahma - Projects</title>
-
-<style>
-:root{
-  --bg:#0b0f16;
-  --card:#121826;
-  --text:#e8eaf0;
-  --muted:#a6adbb;
-  --line:rgba(255,255,255,.10);
-  --btn:rgba(59,130,246,.25);
-  --btnHover:rgba(59,130,246,.4);
-  --btnGhost:rgba(255,255,255,.06);
-  --btnGhostHover:rgba(255,255,255,.15);
-}
-
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-
-.wrap{max-width:1200px;margin:0 auto;padding:25px 20px}
-
-header{padding-top:25px}
-
-.headrow{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  flex-wrap:wrap;
-  gap:16px;
-}
-
-h1{margin:0;font-size:2rem}
-.tag{color:var(--muted);margin-top:4px}
-
-.topbuttons{display:flex;gap:10px;flex-wrap:wrap}
-
-.btn{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:10px;
-  border:1px solid var(--line);
-  background:var(--btn);
-  color:var(--text);
-  text-decoration:none;
-  font-weight:600;
-}
-
-.btn:hover{background:var(--btnHover)}
-
-.btn.ghost{background:var(--btnGhost)}
-.btn.ghost:hover{background:var(--btnGhostHover)}
-
-.section{margin-top:0px}
-
-h2{margin:0 0 8px;font-size:1.6rem}
-.muted{color:var(--muted)}
-
-.card{
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  gap:30px;
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:25px;
-  margin-top:20px;
-}
-
-.media img{
-  width:100%;
-  height:auto;
-  border-radius:12px;
-  border:1px solid var(--line);
-  margin-bottom:15px;
-}
-
-/* IR image grid */
-.image-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-bottom:15px;
-}
-
-.image-grid img{
-  width:100%;
-  height:auto;
-}
-
-/* Controlled video height */
-.media video{
-  width:100%;
-  max-height:280px;
-  object-fit:contain;
-  border-radius:12px;
-  border:1px solid var(--line);
-  margin-bottom:15px;
-  background:#000;
-}
-
-/* More Projects Grid */
-.more-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-  margin-top:25px;
-}
-
-.image-card{
-  position:relative;
-  overflow:hidden;
-  border-radius:12px;
-  border:1px solid var(--line);
-}
-
-.image-card img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-/* Hover overlay */
-.overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-  opacity:0;
-  transition:opacity 0.3s ease;
-  font-size:0.95rem;
-}
-
-.image-card:hover .overlay{
-  opacity:1;
-}
-
-@media(max-width:900px){
-  .card{grid-template-columns:1fr}
-  .more-grid{grid-template-columns:repeat(2,1fr)}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mariam Abu-Rahma - Projects</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="wrap">
+<header class="wrap header">
   <div class="headrow">
     <div>
       <h1>Mariam Abu-Rahma</h1>
-      <div class="tag">Engineering • AI • Robotics</div>
+      <p class="tag">Engineering • AI • Robotics</p>
     </div>
 
     <div class="topbuttons">
@@ -176,122 +26,150 @@ h2{margin:0 0 8px;font-size:1.6rem}
 
 <main class="wrap" id="projects">
 
-<!-- IR PROJECT -->
-<section class="section">
-  <h2>Arduino IR Wand + LED Control System</h2>
-  <div class="muted">Infrared-controlled lighting system with embedded microcontroller logic</div>
+  <!-- IR PROJECT -->
+  <section class="section">
+    <h2>Arduino IR Wand + LED Control System</h2>
+    <div class="muted">Infrared-controlled lighting system with embedded microcontroller logic</div>
 
-  <div class="card">
-    <div class="media">
-      <div class="image-grid">
-        <img src="assets/image1.png">
-        <img src="assets/image2.png">
-        <img src="assets/image3.png">
+    <div class="card">
+      <div class="media">
+        <div class="image-grid">
+          <img src="assets/image1.png" alt="IR project image 1">
+          <img src="assets/image2.png" alt="IR project image 2">
+          <img src="assets/image3.png" alt="IR project image 3">
+        </div>
+
+        <video controls playsinline preload="metadata">
+          <source src="assets/demo.mov" type="video/mp4">
+        </video>
       </div>
 
-      <video controls playsinline preload="metadata">
-        <source src="assets/demo.mov" type="video/mp4">
-      </video>
+      <div class="content">
+        <p>
+          Designed and built a handheld infrared device to control LED systems using microcontroller programming.
+          Integrated hardware circuits with software signal processing to transmit commands. Currently designing
+          custom PCB using KiCad emphasizing clear signals and noise reduction for consistent signal processing.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div>
-      <p><strong>Designed and built an infrared-controlled LED system using embedded microcontroller logic.</strong></p>
+  <!-- NFC ATTENDANCE PROJECT -->
+  <section class="section">
+    <h2>NFC Attendance Tracking System</h2>
+    <div class="muted">WiFi-connected dojo attendance system using ESP32, PN532, and Google Sheets</div>
 
-      <p>
-        This project integrates hardware circuitry with embedded software to transmit and decode IR signals,
-        enabling wireless control of LED patterns and lighting behaviors.
-      </p>
+    <div class="card">
+      <div class="media">
+        <div class="image-grid">
+          <img src="assets/image12.png" alt="NFC attendance project image 1">
+          <img src="assets/image13.png" alt="NFC attendance project image 2">
+          <img src="assets/image14.png" alt="NFC attendance project image 3">
+        </div>
 
-      <p>
-        The system interprets button presses, holds, and repeat signals to trigger different color modes
-        and power states. The hardware is currently being refined into a custom PCB design using KiCad.
-      </p>
+        <video controls playsinline preload="metadata">
+          <source src="assets/demo2.mov" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="content">
+        <p>
+          Designed and built an NFC-based attendance system using an ESP32 microcontroller and PN532 NFC reader
+          to automate student check-ins at my karate dojo. Developed a WiFi-connected system that sends attendance
+          data to Google Sheets through Google Apps Script integration. Improved user experience by adding LED
+          feedback indicators for scan detection, processing status, successful check-ins, and error handling.
+        </p>
+
+        <a class="btn" href="assets/readme1.pdf" target="_blank">Open README</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- AIxKUMITE -->
-<section class="section">
-  <h2>AIxKumite</h2>
-  <div class="muted">AI-based karate match analysis (in progress)</div>
+  <!-- AIxKUMITE -->
+  <section class="section">
+    <h2>AIxKumite</h2>
+    <div class="muted">AI-based karate match analysis in progress</div>
 
-  <div class="card">
-    <div class="media">
-      <img src="assets/screen.png">
-      <video controls playsinline preload="metadata" muted>
-        <source src="assets/output.mp4" type="video/mp4">
-      </video>
+    <div class="card">
+      <div class="media">
+        <img src="assets/screen.png" alt="AIxKumite website screenshot">
+
+        <video controls playsinline preload="metadata" muted>
+          <source src="assets/output.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="content">
+        <p>
+          Building AI detection in karate for opponent data analysis. I am developing a computer vision system
+          that analyzes karate match footage to track athletes, detect techniques, and generate performance data.
+        </p>
+
+        <p>
+          The system uses multi-person detection, pose estimation, and joint-angle validation to recognize
+          techniques while maintaining identity tracking across frames.
+        </p>
+
+        <a class="btn" href="https://aixkumite.com" target="_blank">View Website</a>
+      </div>
     </div>
+  </section>
 
-    <div>
-      <p><strong>Building AI detection in karate for opponent data analysis (in progress).</strong></p>
+  <!-- MORE PROJECTS -->
+  <section class="section">
+    <h2>More Projects</h2>
+    <div class="muted">Additional builds and prototypes.</div>
 
-      <p>
-        I am developing a computer vision system that analyzes karate match footage to track athletes,
-        detect techniques, and generate performance data.
-      </p>
+    <div class="more-grid">
 
-      <p>
-        The system uses multi-person detection, pose estimation, and joint-angle validation to recognize
-        techniques in real time while maintaining identity tracking across frames.
-      </p>
+      <div class="image-card">
+        <img src="assets/image4.png" alt="Mechanical bird automata">
+        <div class="overlay">3D printed mechanical Bird Automata</div>
+      </div>
 
-      <a class="btn" href="https://aixkumite.com" target="_blank">View Website</a>
+      <div class="image-card">
+        <img src="assets/image5.png" alt="Crane robot">
+        <div class="overlay">Crane Robot - User powered</div>
+      </div>
+
+      <div class="image-card">
+        <img src="assets/image6.png" alt="Ultrasonic levitator">
+        <div class="overlay">Ultrasonic Levitator Open-source Kit</div>
+      </div>
+
+      <div class="image-card">
+        <img src="assets/image7.png" alt="Sliding flexi grid 3D print">
+        <div class="overlay">Print-in-place sliding flexi grid 3D print</div>
+      </div>
+
+      <div class="image-card">
+        <img src="assets/image8.png" alt="LED box">
+        <div class="overlay">Father's Day gift color-changing LED box</div>
+      </div>
+
+      <div class="image-card">
+        <img src="assets/image9.png" alt="Arduino dog robot">
+        <div class="overlay">Arduino Powered Boston Dynamics Autonomous Dog</div>
+      </div>
+
+      <div class="image-card">
+        <img src="assets/image10.png" alt="Stair climbing robot">
+        <div class="overlay">Stair Climbing Robot</div>
+      </div>
+
+      <div class="image-card">
+        <img src="assets/image11.png" alt="Circuit star box">
+        <div class="overlay">Simple Circuit Star Box 3D print</div>
+      </div>
+
     </div>
-  </div>
-</section>
-
-<!-- MORE PROJECTS -->
-<section class="section">
-  <h2>More Projects</h2>
-  <div class="muted">Additional builds and prototypes.</div>
-
-  <div class="more-grid">
-
-    <div class="image-card">
-      <img src="assets/image4.png">
-      <div class="overlay">3D printed mechanical Bird Automata</div>
-    </div>
-
-    <div class="image-card">
-      <img src="assets/image5.png">
-      <div class="overlay">Crane Robot-User powered</div>
-    </div>
-
-    <div class="image-card">
-      <img src="assets/image6.png">
-      <div class="overlay">Ultrasonic Levitator Open-source Kit</div>
-    </div>
-
-    <div class="image-card">
-      <img src="assets/image7.png">
-      <div class="overlay">Print-in-place sliding flexi grid 3D print</div>
-    </div>
-
-    <div class="image-card">
-      <img src="assets/image8.png">
-      <div class="overlay">Father's Day gift color-changing LED box</div>
-    </div>
-
-    <div class="image-card">
-      <img src="assets/image9.png">
-      <div class="overlay">Arduino Powered Boston Dynamics Autonomous Dog</div>
-    </div>
-
-    <div class="image-card">
-      <img src="assets/image10.png">
-      <div class="overlay">Stair Climbing Robot</div>
-    </div>
-
-    <div class="image-card">
-      <img src="assets/image11.png">
-      <div class="overlay">Simple Circuit Star Box 3D print</div>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 </main>
+
+<footer class="wrap footer">
+  <p class="muted">© 2026 Mariam Abu-Rahma</p>
+</footer>
 
 </body>
 </html>
