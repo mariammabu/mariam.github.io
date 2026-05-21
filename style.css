@@ -71,16 +71,13 @@ h2{
 
 .media img,
 .media video{
-  width:65%;
-  max-width:300px; /* controls video size */
-  height:65%;
+  width:100%;
+  height:auto;
   display:block;
   border-radius:12px;
   border:1px solid var(--line);
   background:#000;
   margin-bottom:12px;
-  margin-left:auto;
-  margin-right:auto;
 }
 
 /* 3-image grid */
