@@ -71,9 +71,9 @@ h2{
 
 .media img,
 .media video{
-  width:75%;
-  max-width:300px; /* controls video size */
-  height:75%;
+  width:65%;
+  max-width:200px; /* controls video size */
+  height:65%;
   display:block;
   border-radius:12px;
   border:1px solid var(--line);
