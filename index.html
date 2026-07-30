@@ -1,175 +1,201 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mariam Abu-Rahma - Projects</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mariam Abu-Rahma — engineering, AI, robotics, and research portfolio.">
+  <title>Mariam Abu-Rahma | Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-
-<header class="wrap header">
-  <div class="headrow">
-    <div>
-      <h1>Mariam Abu-Rahma</h1>
-      <p class="tag">Engineering • AI • Robotics</p>
-    </div>
-
-    <div class="topbuttons">
-      <a class="btn ghost" href="#projects">Projects</a>
-      <a class="btn ghost" href="resume.pdf" target="_blank">Resume</a>
-      <a class="btn ghost" href="mailto:mariammaburahma@gmail.com?subject=Hello%20Mariam">Contact</a>
-    </div>
+  <div class="intro-screen" aria-hidden="true">
+    <div class="intro-mark">MAR<span>/</span>26</div>
+    <div class="intro-line"><span></span></div>
+    <p>ENGINEERING · DESIGN · IMPACT</p>
   </div>
-</header>
 
-<main class="wrap" id="projects">
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 
-  <!-- IR PROJECT -->
-  <section class="section">
-    <h2>Arduino IR Wand + LED Control System</h2>
-    <div class="muted">Infrared-controlled lighting system with embedded microcontroller logic</div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
-    <div class="card">
-      <div class="media">
-        <div class="image-grid">
-          <img src="assets/image1.png" alt="IR project image 1">
-          <img src="assets/image2.png" alt="IR project image 2">
-          <img src="assets/image3.png" alt="IR project image 3">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Go to top">MAR<span>/</span>26</a>
+    <nav aria-label="Main navigation">
+      <a href="#in-progress">In progress</a>
+      <a href="#completed">Completed</a>
+      <a href="#more">More work</a>
+      <a class="nav-cta" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">ENGINEER · ATHLETE</p>
+        <h1>Dream it. Design it.<em><br>Build it.</em></h1>
+        <p class="hero-text">
+          I’m Mariam, a 12th grade engineer located in the Bay Area interested in electrical engineering,
+          3D design, robotics, and computer vision.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#in-progress">Explore projects</a>
+          <a class="button secondary" href="mailto:mariammaburahma@gmail.com">Contact me</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Portfolio highlights">
+        <div class="status"><span></span> Currently building...</div>
+        <div class="hero-stat"><strong>02</strong><span>active engineering projects</span></div>
+        <div class="hero-stat"><strong>WPI</strong><span>wearable sensor internship</span></div>
+        <div class="hero-stat"><strong>USA</strong><span>National Karate Team</span></div>
+      </aside>
+    </section>
+
+    <section class="section shell" id="in-progress">
+      <div class="section-heading">
+        <div><p class="eyebrow">PROJECT NOTES / 2026</p><h2>In progress</h2></div>
+        <p>Projects that are still being designed and improved upon.</p>
+      </div>
+
+      <article class="project reveal">
+        <div class="project-label"><span>01</span><b>WEARABLE RESEARCH</b></div>
+        <div class="project-layout">
+          <div class="project-media wpi-gallery">
+            <model-viewer class="model-viewer" src="assets/wpi-sensor.glb" alt="Interactive 3D model of the WPI wearable sensor board" camera-controls auto-rotate shadow-intensity="1" exposure="1.05" interaction-prompt="auto">
+              <div class="model-fallback" slot="poster">Drag to rotate the sensor model</div>
+            </model-viewer>
+            <img src="assets/wpi1.jpg" alt="WPI wearable sensor research image 1">
+            <img src="assets/wpi.jpg" alt="WPI wearable sensor research image 2">
+            <img src="assets/wpi3.jpg" alt="WPI wearable sensor research image 3">
+            <img src="assets/wpi4.jpg" alt="WPI wearable sensor research image 4">
+            <img src="assets/wpi5.jpg" alt="WPI wearable sensor research image 5">
+            <img src="assets/wpi6.jpg" alt="WPI wearable sensor research image 6">
+          </div>
+          <div class="project-copy">
+            <p class="project-state">RESEARCH INTERNSHIP · WPI</p>
+            <h3>Wearable Respiratory Sensor</h3>
+            <p class="project-lead">Miniaturizing a wearable sensing platform for oxygen, carbon dioxide, and hypoxia monitoring.</p>
+            <p>Working with PhD researchers under Professor Ulkuhan Guler, I designed a compact 6-layer sensor PCB in Altium, planned the component layout and layer stack, routed mixed analog and digital signals, and developed a penny-sized sensor head with 50+ components.</p>
+            <div class="tech-list"><span>Altium</span><span>PCB Design</span><span>Wearable Sensors</span><span>3D CAD</span></div>
+            <p class="interaction-note">↻ Drag the model to rotate · scroll to zoom</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-label"><span>02</span><b>EMBEDDED SYSTEMS</b></div>
+        <div class="project-layout reverse">
+          <div class="project-media application-gallery">
+            <img src="assets/application.jpg" alt="Application project overview">
+            <img src="assets/application2.jpg" alt="Application project hardware detail">
+            <img src="assets/application3.jpg" alt="Application project enclosure detail">
+            <img src="assets/application4.jpg" alt="Application project interface">
+            <video class="wide compact-video" controls playsinline preload="metadata" muted data-silent>
+              <source src="assets/application-demo.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="project-copy">
+            <p class="project-state">IN DEVELOPMENT</p>
+            <h3>Interactive Application</h3>
+            <p class="project-lead">A custom ESP32 device combining a screen, controls, SD storage, and audio playback.</p>
+            <p>I am integrating an ST7789 display, microSD storage, an I²S amplifier, a speaker, and a custom interface into one compact physical product. The project includes photo booth apps and reaction-time tests for athlete performance. Currently working on using the speaker as an alarm and mp3 player.</p>
+            <div class="tech-list"><span>ESP32</span><span>C++</span><span>I²S Audio</span><span>Fusion 360</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project-featured reveal">
+        <div class="project-label"><span>03</span><b>COMPUTER VISION</b></div>
+        <div class="project-layout">
+          <div class="project-media media-stack aixkumite-media">
+            <video controls playsinline preload="metadata" muted data-silent>
+              <source src="assets/output.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+          </div>
+          <div class="project-copy">
+            <p class="project-state">IN DEVELOPMENT</p>
+            <h3>AIxKumite</h3>
+            <p class="project-lead">Computer-vision match analysis designed specifically for competitive karate.</p>
+            <p>I am developing a system using YOLOv8, MediaPipe, and various datasets to track athletes and recognize techniques to turn match footage into performance data.</p>
+            <div class="tech-list"><span>Python</span><span>YOLOv8</span><span>MediaPipe</span><span>Computer Vision</span></div>
+            <a class="text-link" href="https://aixkumite.com" target="_blank" rel="noopener">Visit AIxKumite ↗</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section completed-section" id="completed">
+      <div class="shell">
+        <div class="section-heading">
+          <div><p class="eyebrow">BUILT / TESTED</p><h2>Completed projects</h2></div>
+          <p>Finished systems.</p>
         </div>
 
-        <video controls playsinline preload="metadata">
-          <source src="assets/demo.mov" type="video/mp4">
-        </video>
-      </div>
+        <div class="completed-grid">
+          <article class="compact-project reveal">
+            <div class="compact-top"><span>04</span><p>HARDWARE + PCB</p></div>
+            <h3>Arduino IR Wand + LED Control</h3>
+            <div class="mini-gallery three">
+              <img src="assets/image1.png" alt="IR wand project image 1">
+              <img src="assets/image2.png" alt="IR wand project image 2">
+              <img src="assets/image3.png" alt="IR wand project image 3">
+            </div>
+            <div class="video-pair">
+              <video controls playsinline preload="metadata" muted data-silent><source src="assets/demo.mov" type="video/mp4"></video>
+              <video controls playsinline preload="metadata" muted data-silent><source src="assets/ir-demo-2.mp4" type="video/mp4"></video>
+            </div>
+            <p>Designed and built a handheld infrared controller and LED receiver system, then developed a custom PCB focused on reliable signal transmission and clean routing. Later encorporated old infrared wand, which uses vibrations to send signals, to turn on the lamp.</p>
+            <div class="tech-list"><span>Arduino</span><span>IR</span><span>Altium</span><span>3D Printing</span></div>
+          </article>
 
-      <div class="content">
-        <p>
-          Designed and built a handheld infrared device to control LED systems using microcontroller programming.
-          Integrated hardware circuits with software signal processing to transmit commands. Currently designing
-          custom PCB using KiCad emphasizing clear signals and noise reduction for consistent signal processing.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- NFC ATTENDANCE PROJECT -->
-  <section class="section">
-    <h2>NFC Attendance Tracking System</h2>
-    <div class="muted">WiFi-connected dojo attendance system using ESP32, PN532, and Google Sheets</div>
-
-    <div class="card">
-      <div class="media">
-        <div class="image-grid">
-          <img src="assets/image12.png" alt="NFC attendance project image 1">
-          <img src="assets/image13.png" alt="NFC attendance project image 2">
-          <img src="assets/image14.png" alt="NFC attendance project image 3">
+          <article class="compact-project reveal">
+            <div class="compact-top"><span>05</span><p>IOT SYSTEM</p></div>
+            <h3>NFC Attendance Tracker</h3>
+            <div class="mini-gallery three">
+              <img src="assets/image12.png" alt="NFC project image 1">
+              <img src="assets/image13.png" alt="NFC project image 2">
+              <img src="assets/image14.png" alt="NFC project image 3">
+            </div>
+            <video class="short-demo" controls playsinline preload="metadata"><source src="assets/demo2.mov" type="video/mp4"></video>
+            <p>Built an ESP32 and PN532 check-in system that sends attendance records to Google Sheets and uses LEDs to communicate scan, processing, success, and error states.</p>
+            <div class="tech-list"><span>ESP32</span><span>NFC</span><span>Wi-Fi</span><span>Apps Script</span></div>
+            <a class="text-link" href="assets/readme1.pdf" target="_blank" rel="noopener">Open README ↗</a>
+          </article>
         </div>
-
-        <video controls playsinline preload="metadata">
-          <source src="assets/demo2.mov" type="video/mp4">
-        </video>
       </div>
+    </section>
 
-      <div class="content">
-        <p>
-          Designed and built an NFC-based attendance system using an ESP32 microcontroller and PN532 NFC reader
-          to automate student check-ins at my karate dojo. Developed a WiFi-connected system that sends attendance
-          data to Google Sheets through Google Apps Script integration. Improved user experience by adding LED
-          feedback indicators for scan detection, processing status, successful check-ins, and error handling.
-        </p>
-
-        <a class="btn" href="assets/readme1.pdf" target="_blank">Open README</a>
+    <section class="section shell" id="more">
+      <div class="section-heading">
+        <div><p class="eyebrow">EXPERIMENTS</p><h2>More builds</h2></div>
+        <p>Smaller-scale projects compiled over my high school years.</p>
       </div>
+      <div class="more-grid">
+        <figure class="reveal"><img src="assets/image4.png" alt="Mechanical bird automata"><figcaption>Mechanical Bird Automata</figcaption></figure>
+        <figure class="reveal"><img src="assets/image5.png" alt="User-powered crane robot"><figcaption>User-Powered Crane Robot</figcaption></figure>
+        <figure class="reveal"><img src="assets/image6.png" alt="Ultrasonic levitator"><figcaption>Ultrasonic Levitator</figcaption></figure>
+        <figure class="reveal"><img src="assets/image7.png" alt="Sliding flexi grid"><figcaption>Print-in-Place Flexi Grid</figcaption></figure>
+        <figure class="reveal"><img src="assets/image8.png" alt="Color changing LED box"><figcaption>Color-Changing LED Box</figcaption></figure>
+        <figure class="reveal"><img src="assets/image9.png" alt="Arduino dog robot"><figcaption>Arduino Quadruped Robot</figcaption></figure>
+        <figure class="reveal"><img src="assets/image10.png" alt="Stair climbing robot"><figcaption>Stair-Climbing Robot</figcaption></figure>
+        <figure class="reveal"><img src="assets/image11.png" alt="Circuit star box"><figcaption>Circuit Star Box</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div><p class="eyebrow">LET'S BUILD SOMETHING</p><h2>mariammaburahma@gmail.com</h2></div>
+      <p>© 2026 Mariam Abu-Rahma</p>
     </div>
-  </section>
-
-  <!-- AIxKUMITE -->
-  <section class="section">
-    <h2>AIxKumite</h2>
-    <div class="muted">AI-based karate match analysis in progress</div>
-
-    <div class="card">
-      <div class="media">
-        <img src="assets/screen.png" alt="AIxKumite website screenshot">
-
-        <video controls playsinline preload="metadata" muted>
-          <source src="assets/output.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div class="content">
-        <p>
-          Building AI detection in karate for opponent data analysis. I am developing a computer vision system
-          that analyzes karate match footage to track athletes, detect techniques, and generate performance data.
-        </p>
-
-        <p>
-          The system uses multi-person detection, pose estimation, and joint-angle validation to recognize
-          techniques while maintaining identity tracking across frames.
-        </p>
-
-        <a class="btn" href="https://aixkumite.com" target="_blank">View Website</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MORE PROJECTS -->
-  <section class="section">
-    <h2>More Projects</h2>
-    <div class="muted">Additional builds and prototypes.</div>
-
-    <div class="more-grid">
-
-      <div class="image-card">
-        <img src="assets/image4.png" alt="Mechanical bird automata">
-        <div class="overlay">3D printed mechanical Bird Automata</div>
-      </div>
-
-      <div class="image-card">
-        <img src="assets/image5.png" alt="Crane robot">
-        <div class="overlay">Crane Robot - User powered</div>
-      </div>
-
-      <div class="image-card">
-        <img src="assets/image6.png" alt="Ultrasonic levitator">
-        <div class="overlay">Ultrasonic Levitator Open-source Kit</div>
-      </div>
-
-      <div class="image-card">
-        <img src="assets/image7.png" alt="Sliding flexi grid 3D print">
-        <div class="overlay">Print-in-place sliding flexi grid 3D print</div>
-      </div>
-
-      <div class="image-card">
-        <img src="assets/image8.png" alt="LED box">
-        <div class="overlay">Father's Day gift color-changing LED box</div>
-      </div>
-
-      <div class="image-card">
-        <img src="assets/image9.png" alt="Arduino dog robot">
-        <div class="overlay">Arduino Powered Boston Dynamics Autonomous Dog</div>
-      </div>
-
-      <div class="image-card">
-        <img src="assets/image10.png" alt="Stair climbing robot">
-        <div class="overlay">Stair Climbing Robot</div>
-      </div>
-
-      <div class="image-card">
-        <img src="assets/image11.png" alt="Circuit star box">
-        <div class="overlay">Simple Circuit Star Box 3D print</div>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer class="wrap footer">
-  <p class="muted">© 2026 Mariam Abu-Rahma</p>
-</footer>
-
+  </footer>
 </body>
 </html>
